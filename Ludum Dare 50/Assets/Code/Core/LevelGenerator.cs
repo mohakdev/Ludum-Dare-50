@@ -28,16 +28,12 @@ public class LevelGenerator : MonoBehaviour
         //Now Setting everything's parent as folder
         NewBlock.transform.parent = Folder.transform;
         NewWalls.transform.parent = Folder.transform;
+
         //Setting Killer to ON
-        GameObject CurrentBlock = GameObject.Find($"Block [{Values.BlockNumber - 1}]");
-        print($"Block [{Values.BlockNumber - 2}]");
-        GameObject Killer = CurrentBlock.transform.Find("KillDetect").gameObject;
+        GameObject PreviousBlock = GameObject.Find($"Block [{Values.BlockNumber - 1}]");
+        GameObject Killer = PreviousBlock.transform.Find("KillDetect").gameObject;
         Killer.SetActive(true);
-        //This is just to conserve some memory and make the game lighter
-        GameObject PreviousBlock = GameObject.Find($"Block [{Values.BlockNumber - 2}]");
-        GameObject PreviousWall = GameObject.Find($"Walls [{Values.BlockNumber - 2}]");
-        Destroy(PreviousBlock);
-        Destroy(PreviousWall);
+
         //Destroying the detector in the end.
         Destroy(gameObject);
     }

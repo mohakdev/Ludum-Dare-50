@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour
         mybody = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         float inputX = Input.GetAxis("Horizontal");
         //This will move the player right or left depending on the key pressed
