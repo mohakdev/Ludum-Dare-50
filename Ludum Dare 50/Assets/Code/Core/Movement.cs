@@ -26,4 +26,14 @@ public class Movement : MonoBehaviour
             Values.SubtractEnergy(20);
         }
     }
+    private void Update()
+    {
+        if (Input.GetButtonDown("Jump") && Values.JumpEnergy >= 0)
+        {
+            //This runs when player presses space
+            //This code will make player jump
+            mybody.AddForce(new Vector2(0f, Values.JumpHeight), ForceMode2D.Impulse);
+            Values.SubtractEnergy(20);
+        }
+    }
 }

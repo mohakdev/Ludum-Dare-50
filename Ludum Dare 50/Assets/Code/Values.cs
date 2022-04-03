@@ -8,7 +8,7 @@ public static class Values
     public static int JumpEnergy = 100;
     public static int JumpHeight = 8;
     public static int PlayerSpeed = 10;
-    public static float BlockGenPos = 0;
+    public static float BlockGenPos = 20;
     public static int BlockNumber = 0;
 
     public static int SubtractEnergy(int EnergyToMinus)
