@@ -7,6 +7,7 @@ public class LevelGenerator : MonoBehaviour
     public GameObject Block;
     public GameObject Walls;
     public GameObject Folder;
+    bool AlreadyRan = false;
     /*
     Whoever is reading this consider this a warning!!!
     If you read the code below you may suffer from a headache or worse
@@ -16,6 +17,7 @@ public class LevelGenerator : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name != "Player") { return; }
+        if (AlreadyRan) { return; }
         //Generating Walls
         GameObject NewWalls = Instantiate(Walls);
         NewWalls.transform.position = new Vector3(0, Values.BlockGenPos, 0);
@@ -39,5 +41,6 @@ public class LevelGenerator : MonoBehaviour
         //Now Setting everything's parent as folder
         NewBlock.transform.parent = Folder.transform;
         NewWalls.transform.parent = Folder.transform;
+        AlreadyRan = true;
     }
 }
