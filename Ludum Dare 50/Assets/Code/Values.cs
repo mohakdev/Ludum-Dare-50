@@ -1,11 +1,6 @@
-/*
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-*/
 public static class Values
 {
-    public static int JumpEnergy = 100;
+    public static int JumpEnergy = 80;
     public static int JumpHeight = 8;
     public static int PlayerSpeed = 10;
     public static float BlockGenPos = 20;

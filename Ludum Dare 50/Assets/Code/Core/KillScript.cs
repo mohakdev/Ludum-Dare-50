@@ -8,5 +8,6 @@ public class KillScript : MonoBehaviour
     {
         if (collision.gameObject.name != "Player") { return; }
         print("Killed");
+        Time.timeScale = 0;
     }
 }
