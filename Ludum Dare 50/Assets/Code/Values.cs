@@ -1,20 +1,19 @@
 public static class Values
 {
-    public static int JumpEnergy = 200;
+    public static float MaxEnergy = 100;
+    public static float JumpEnergy = 50;
     public static int JumpHeight = 8;
     public static int PlayerSpeed = 10;
     public static float BlockGenPos = 20;
     public static int BlockNumber = 0;
 
-    public static int SubtractEnergy(int EnergyToMinus)
+    public static void SubtractEnergy(float EnergyToMinus)
     {
         JumpEnergy -= EnergyToMinus;
-        return JumpEnergy;
     }
-    public static int AddEnergy(int EnergyToAdd)
+    public static void AddEnergy(float EnergyToAdd)
     {
         JumpEnergy += EnergyToAdd;
-        return JumpEnergy;
     }
     public static float ChangeBlockPos(float ChangeBy)
     {

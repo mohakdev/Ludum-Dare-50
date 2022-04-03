@@ -12,7 +12,7 @@ public class LevelGenerator : MonoBehaviour
     Whoever is reading this consider this a warning!!!
     If you read the code below you may suffer from a headache or worse
     I know the code works and i tried adding comments to explain what does what but it still
-    looks like speggity code.
+    looks like spaghetti code.
     */
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,7 +24,7 @@ public class LevelGenerator : MonoBehaviour
         //Making a new block
         GameObject NewBlock = Instantiate(Block);
         NewBlock.transform.position = new Vector3(0, Values.BlockGenPos, 0);
-        //Incrementing the block number & seting name of objects
+        //Incrementing the block number & spaghetti name of objects
         Values.IncrementBlockNumber();
         NewBlock.name = $"Block [{Values.BlockNumber}]";
         NewWalls.name = $"Walls [{Values.BlockNumber}]";
@@ -33,7 +33,7 @@ public class LevelGenerator : MonoBehaviour
         Values.ChangeBlockPos(Background.transform.localScale.y);
         //Making Floating Blocks
         GameObject FloatingBlocks = NewBlock.transform.Find("Floating Ground").gameObject;
-        //First i set random positions of all gameobjects inside floating blocks
+        //First I set random positions of all Game Objects inside floating blocks
         foreach (Transform child in FloatingBlocks.transform)
         {
             child.position = new Vector3(Random.Range(-8f, 8f), child.position.y);
