@@ -5,11 +5,13 @@ using UnityEngine;
 public class KillScript : MonoBehaviour
 {
     public GameObject DeathScreen;
+    bool alreadyRan = false;
     private void Update()
     {
-        if (Values.JumpEnergy <= 0)
+        if (Values.JumpEnergy <= 0 && !alreadyRan)
         {
             KillPlayer();
+            alreadyRan = true;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -23,8 +25,8 @@ public class KillScript : MonoBehaviour
     {
         //Kill The Player
         AudioManager.PlaySound(AudioManager.Instance.AudioList[3]);
-        Time.timeScale = 0;
         Values.BlockGenPos = 20;
         DeathScreen.SetActive(true);
+        Time.timeScale = 0;
     }
 }

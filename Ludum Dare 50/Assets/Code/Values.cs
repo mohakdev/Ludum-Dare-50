@@ -6,6 +6,7 @@ public static class Values
     public static int PlayerSpeed = 10;
     public static float BlockGenPos = 20;
     public static int BlockNumber = 0;
+    public static bool TutorialShown = false;
 
     public static void SubtractEnergy(float EnergyToMinus)
     {

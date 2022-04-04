@@ -9,6 +9,7 @@ public class CoinScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+
             AudioManager.PlaySound(AudioManager.Instance.AudioList[1]);
             Values.AddEnergy(40);
             EnergyBar.UpdateEnergyBar();

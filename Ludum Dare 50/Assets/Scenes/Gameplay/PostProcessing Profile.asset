@@ -67,7 +67,7 @@ MonoBehaviour:
   components:
   - {fileID: -7032279057019529557}
   - {fileID: 367412421981753194}
-  - {fileID: 4151689906327459850}
+  - {fileID: 1295244168080498599}
 --- !u!114 &367412421981753194
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
   m_Name: Vignette
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   color:
     m_OverrideState: 1
@@ -93,7 +93,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.15
+    m_Value: 0.36
     min: 0
     max: 1
   smoothness:
@@ -104,7 +104,7 @@ MonoBehaviour:
   rounded:
     m_OverrideState: 1
     m_Value: 1
---- !u!114 &4151689906327459850
+--- !u!114 &1295244168080498599
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,24 +113,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccf1aba9553839d41ae37dd52e9ebcce, type: 3}
-  m_Name: MotionBlur
+  m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
+  m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
-  mode:
-    m_OverrideState: 1
-    m_Value: 0
-  quality:
-    m_OverrideState: 1
-    m_Value: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.32
+    m_Value: 0.1
     min: 0
     max: 1
-  clamp:
-    m_OverrideState: 1
-    m_Value: 0.05
-    min: 0
-    max: 0.2
