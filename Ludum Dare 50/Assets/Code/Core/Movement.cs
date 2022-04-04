@@ -6,10 +6,12 @@ public class Movement : MonoBehaviour
 {
     [Header("Player Settings :")]
     private Rigidbody2D mybody;
+    AudioSource MusicPlayer;
 
     private void Awake()
     {
         mybody = GetComponent<Rigidbody2D>();
+        MusicPlayer = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -25,6 +27,7 @@ public class Movement : MonoBehaviour
             //This runs when player presses space
             //This code will make player jump
             mybody.AddForce(new Vector2(0f, Values.JumpHeight), ForceMode2D.Impulse);
+            MusicPlayer.Play();
             Values.SubtractEnergy(20f);
             EnergyBar.UpdateEnergyBar();
         }

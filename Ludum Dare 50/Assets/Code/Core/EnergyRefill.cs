@@ -20,7 +20,7 @@ public class EnergyRefill : MonoBehaviour
         if (!isTouching) { return; }
         if (Values.JumpEnergy < Values.MaxEnergy)
         {
-            Values.AddEnergy(0.3f);
+            Values.AddEnergy(0.2f);
             EnergyBar.UpdateEnergyBar();
         }
     }
