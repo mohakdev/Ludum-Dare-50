@@ -10,6 +10,8 @@ public class ScoreScript : MonoBehaviour
     float HighestPosition = 0f;
     float Score = 0f;
     Text Label;
+    public static int DisplayScore;
+
     void Awake()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
@@ -26,7 +28,7 @@ public class ScoreScript : MonoBehaviour
         {
             //Increase the score
             Score += 0.2f;
-            int DisplayScore = (int)Score;
+            DisplayScore = (int)Score;
             Label.text = $"SCORE : {DisplayScore}";
         }
         PreviousPosition = Player.transform.position.y;

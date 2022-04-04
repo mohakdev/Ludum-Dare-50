@@ -25,6 +25,10 @@ public class KillScript : MonoBehaviour
     {
         //Kill The Player
         AudioManager.PlaySound(AudioManager.Instance.AudioList[3]);
+        if (PlayerPrefs.GetInt("HighScore", 0) < ScoreScript.DisplayScore)
+        {
+            PlayerPrefs.SetInt("HighScore", ScoreScript.DisplayScore);
+        }
         Values.BlockGenPos = 20;
         DeathScreen.SetActive(true);
         Time.timeScale = 0;
