@@ -38,6 +38,12 @@ public class LevelGenerator : MonoBehaviour
         {
             child.position = new Vector3(Random.Range(-8f, 8f), child.position.y);
         }
+        //Adding coins
+        GameObject Coins = NewBlock.transform.Find("Coins").gameObject;
+        foreach (Transform child in Coins.transform)
+        {
+            child.position = new Vector3(Random.Range(-10f, 10f), child.position.y);
+        }
         //Now Setting everything's parent as folder
         NewBlock.transform.parent = Folder.transform;
         NewWalls.transform.parent = Folder.transform;

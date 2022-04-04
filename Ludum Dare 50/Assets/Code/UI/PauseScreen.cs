@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class PauseScreen : MonoBehaviour
 {
-    AudioSource MusicPlayer;
-    private void Awake()
-    {
-        MusicPlayer = GetComponent<AudioSource>();
-    }
     public void Restart()
     {
         LevelManager.RestartLevel();
@@ -21,6 +16,6 @@ public class PauseScreen : MonoBehaviour
     }
     public void PlayClickSound()
     {
-        MusicPlayer.Play();
+        AudioManager.PlaySound(AudioManager.Instance.AudioList[2]);
     }
 }
