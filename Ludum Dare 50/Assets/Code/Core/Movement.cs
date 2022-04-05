@@ -26,7 +26,7 @@ public class Movement : MonoBehaviour
             //This code will make player jump
             mybody.AddForce(new Vector2(0f, Values.JumpHeight), ForceMode2D.Impulse);
             AudioManager.PlaySound(AudioManager.Instance.AudioList[0]);
-            Values.SubtractEnergy(20f);
+            Values.SubtractEnergy(10f);
             EnergyBar.UpdateEnergyBar();
         }
     }

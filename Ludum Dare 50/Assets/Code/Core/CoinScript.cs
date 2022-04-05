@@ -11,7 +11,7 @@ public class CoinScript : MonoBehaviour
         {
 
             AudioManager.PlaySound(AudioManager.Instance.AudioList[1]);
-            Values.AddEnergy(40);
+            Values.JumpEnergy = Values.MaxEnergy;
             EnergyBar.UpdateEnergyBar();
             GameObject EffectClone = Instantiate(ParticleEffect, transform.position, transform.rotation);
             EffectClone.SetActive(true);
